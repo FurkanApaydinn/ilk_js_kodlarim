@@ -40,6 +40,7 @@ console.log(adaMı);
 console.log(typeof dil);
 console.log(typeof nüfus);
 console.log(typeof ülke);
+// Örnek Challange -- Boy - kilo hesaplama
 const boymurat = 1.75;
 const boyengin = 1.82;
 const ağırlıkmurat = 70;
