@@ -40,3 +40,24 @@ console.log(adaMı);
 console.log(typeof dil);
 console.log(typeof nüfus);
 console.log(typeof ülke);
+const boymurat = 1.75;
+const boyengin = 1.82;
+const ağırlıkmurat = 70;
+const ağırlıkengin = 80;
+console.log(
+  "Murat'ın boyu " + boymurat,
+  "ve kilosu " +
+    ağırlıkmurat +
+    " " +
+    "Engin'in boyu " +
+    boyengin +
+    " " +
+    "ve kilosu " +
+    ağırlıkengin
+);
+const vücutkitleendeksimurat = ağırlıkmurat / boymurat ** 2;
+console.log("Muratın vücut kitle endeksi : " + vücutkitleendeksimurat);
+const vücutkitleendeksiengin = ağırlıkengin / boyengin ** 2;
+console.log("Enginin vücut kitle endeksi : " + vücutkitleendeksiengin);
+const büyükmü = vücutkitleendeksimurat > vücutkitleendeksiengin;
+console.log(büyükmü);
