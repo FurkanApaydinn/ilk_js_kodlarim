@@ -118,3 +118,19 @@ console.lincog(string.substring(4,10)) // script
 console.log(string.includes("java")) // true // string içerisinde java var ise true döndürür. yok ise false döndürür
 
 console.log(string.includes("fur"))//false 
+// let str ="Merhaba Furkan, nasılsın furkan"
+// str.replaceAll("furkan","Apaydın")// replace sadece 1 kelimeyi değiştirir. ReplecaAll ise tüm kelimeleri değiştirir.
+// let str1="30 days of javascript" 
+// console.log(str.indexOf("d"))//3 belirttiğin değerin kelime içerisinde yer sayısını bulur.
+
+// ------------------2.gün challange-----------
+let challange="30 Days Of JavaScript"
+console.log(challange)
+console.log(challange.length)
+console.log(challange.toUpperCase())
+console.log(challange.toLowerCase())
+console.log(challange.substring(2))
+console.log(challange.includes("Script"))
+console.log(challange.split(""))
+console.log(challange.replaceAll("JavaScript","Python"))
+console.log(challange.match(/a/gi))
