@@ -151,4 +151,76 @@ const total = numbers.reduce((çarpma,numbers)=>{
 
 // Aşağıdaki satırda console.log: 2400 olmalıdır
 console.log(total); 
+// prompt("Bir sayı giriniz:", "Sayı pozitif bir sayı olmalıdır!") // ikinci değer promptbox içerisinde gösterilir.
+// let sayi = prompt("bir sayı giriniz :")
+// let result = sayi * 2
+// console.log(result)
+// let silme = confirm("Doğan Kurtuluş yaşlı mı ?")
 
+// console.log(silme?"Doğan Kutuluş yaşlı  😒":"Olsun Doğan Kurtuluş gene yaşlı 😂😂")
+const date = new Date()
+let year = date.getFullYear(),
+ month = date.getMonth(),
+ day = date.getDate(),
+ hour = date.getHours(),
+ dayName = date.getDay(),
+ minute = date.getMinutes(),
+ second=date.getSeconds()
+
+ let months=["ocak","şubat","mart","nisan","mayıs","haziran","temmuz","ağustos","Eylül","ekim","kasım","aralık"]
+console.log(months.length)
+let days = ["pazar", "pazartesi", "salı", "çarşamba", "perşembe", "cuma", "cumartesi"]
+let humanReadableDate = `${day} ${months[month]} ${year},${days[dayName]},${hour}:${minute}:${second}`
+console.log(humanReadableDate)
+
+// 3.Gün Challange
+let firstName = "Furkan",
+ lastName = "Apaydın",
+ country = "Türkiye",
+ city = "İstanbul",
+ Year = 1992
+console.log(typeof(firstName),typeof(lastName),typeof(country),typeof(city),typeof(year))
+ 
+console.log("10" == 10)//true
+console.log(parseInt(9.8)) // 9
+// doğruluk değeri sağlayan 3 JavaScript ifadesi;
+console.log("Furkan" == "Furkan")// true
+console.log("Apaydın" == "Apaydın")// true
+console.log("Aydın" == "Aydın")//true
+// Yanlış değer sağlayan 3 JavaScript ifadesi;
+console.log("Furkan" == "apaydın")// false
+console.log("10" === 10)// false
+console.log("Aydın" == 20)//false
+// Not : == 2 eşittirde veri içeriklerimne bakıyor. === 3 eşittirde veri türlerine bakıyor.
+console.log(4 > 3) // true
+console.log(4 >= 3) //true
+console.log(4 < 3) // false
+console.log(4 == 4) // true
+console.log(4 === 4) // true
+console.log(4 != 4
+)// false
+console.log(4 !== 4
+)// false
+console.log(4 != '4'
+)// false
+console.log(4 == '4'
+)// veri içeriklerinde 4 olduğu için true
+console.log(4 === '4')// veri modellerinde string ve integer olduğu için false
+
+let python = ["p","y","t","h","o","n"]
+console.log(python.length)
+let Jargonun = ["J","a","r","g","o","n","u","n"]
+console.log(Jargonun.length)
+console.log(python == Jargonun) // false
+
+// true and false
+console.log(4 > 3 && 10 < 12) // true & true = true
+console.log(4 > 3 && 10 > 12) // true & false = false
+console.log(4 > 3 || 10 < 12) // true || true = true
+console.log(4 > 3 || 10 > 12)  // true || false = true
+console.log(!(4 > 3)) // false
+console.log(!(4 < 3)) // true
+console.log(!(false)) // true
+console.log(!(4 > 3 && 10 < 12)) // true & true değilse false 
+console.log(!(4 > 3 && 10 > 12)) // true & false değilse true
+console.log(!(4 === '4')) // false değilse true
