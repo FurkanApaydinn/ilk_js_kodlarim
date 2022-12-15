@@ -256,3 +256,40 @@ console.log(!(false)) // true
 console.log(!(4 > 3 && 10 < 12)) // true & true değilse false 
 console.log(!(4 > 3 && 10 > 12)) // true & false değilse true
 console.log(!(4 === '4')) // false değilse true
+
+// challange 4-- 5-15 sayılarını console.log yapacak bir while döngüsü yazın. Bir değişken i tanımladığınızdan emin olun (let anahtar sözcüğünü kullanın) ve bunu while döngüsünden önce başlatın.
+let i = 5
+while (i <= 15) {
+ console.log(i)
+ i++
+}
+
+
+// Challange 5-- Aynısını yapacak bir for döngüsü yazın.
+for (x = 5; x <= 15; x++){
+ console.log(x)
+
+}
+
+// Challange 6-- 1. alıştırmadakiyle aynı while döngüsünü yazın ancak 15'ten 5'e kadar olan sayıları geriye doğru yazdıracak şekilde yazın. Bunun için artırma operatörü yerine azaltma operatörünü kullanmanız gerekecektir. Sonsuz bir döngü oluşturmamak için koşulunuzu değiştirirken çok dikkatli olmalısınız!
+
+let y = 15
+while (y <= 5) {
+ console.log(y)
+ y--
+}
+
+
+//Challange 7-- Aynısını for döngüsü için yapın 15'ten 5'e geriye doğru yazdırılacak şekilde değiştirin. Yine durumunuza dikkat edin ve sonsuz bir döngüden kaçının.
+
+for (z = 15; z <= 5; z--){
+ console.log(z)
+}
+
+
+
+// Challange 8 Bonus-- for döngünüzü Drill 2'den yeniden yazabilir misiniz, böylece 5, sonra 6, sonra 7, sonra 8 vb. konsola kaydetmek yerine yalnızca tek sayıları konsola kaydedebilir miyiz? Yani ilk yinelemede konsola 5, ikinci yinelemede 7, ardından 9, sonra 11, sonra 13, sonra 15 ve orada durmalıdır.
+
+for (k = 5; k <= 5; z += 2){
+ console.log(k)
+}
