@@ -167,6 +167,38 @@ let year = date.getFullYear(),
  minute = date.getMinutes(),
  second=date.getSeconds()
 
+//challange 1
+function checkAge(data) {
+ if (data === { age: 18 }) {
+  console.log("you are an adult");
+ } else if (data == { age: 18 }) {
+  console.log("you are still an adult");
+ } else {
+  console.log("hımm. you don't have an age I guess");
+ }
+}
+checkAge({ age: 18 })//hımm. you don't have an age I guess
+
+//challange 2
+var num = 8;
+var num = 10;
+console.log(num)
+// challange 3 (for) 
+const firstNamesArray = ['Violet', 'Charlie', 'Veruca', 'Mike', 'Augustus'];
+const lastNamesArray = ['Beauregarde', 'Bucket', 'Salt', 'Teavee', 'Gloop'];
+
+for (let i = 0; i<firstNamesArray.length;i++){
+  console.log(`${firstNamesArray[i]} ${lastNamesArray[i]}`)
+}
+
+// for (let i = 0; i< firstNamesArray.length; i++){
+// firstNamesArray[i] += " " + lastNamesArray[i]
+// }
+
+// firstNamesArray.reverse();
+// console.log(firstNamesArray)
+
+
  let months=["ocak","şubat","mart","nisan","mayıs","haziran","temmuz","ağustos","Eylül","ekim","kasım","aralık"]
 console.log(months.length)
 let days = ["pazar", "pazartesi", "salı", "çarşamba", "perşembe", "cuma", "cumartesi"]
