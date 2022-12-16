@@ -377,3 +377,76 @@ const planetNamesWithMoons = planets.filter((a)=> a.numOfMoons>0)
 const yeni=planetNamesWithMoons.map((a)=>a.name)
 // Konsolda şöyle yazmalıdır: ["Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
 console.log(yeni);
+//filter metodu
+const numbers = [12, 13, 14, 130, 44]
+const büyükMü = numbers.filter(sayi => sayi > 10)
+console.log(büyükMü) //10 dan büyük olan sayıları filtreleme
+
+// karakter sayısı 4 den küçük olanları filtreleme
+
+const names = ["furkan", "cem", "ece", "burak", "gül", "mehmet", "Neşe"]
+console.log(names.filter(küçük=>küçük.length<4))
+
+const users = [
+  {
+    name: "furkan",
+    age:30
+  },
+  {
+    name: "Barış",
+    age:27
+  },
+  {
+    name: "Doğan",
+    age: 36
+    
+  },
+  {
+    name: "Hüseyin",
+    age: 28
+    
+  }
+]
+console.log(users.filter(user => user.age >= 25))
+console.log(names.filter(name => name.includes("ce"))) // içerisinde ce geçenleri listele
+
+
+//includes metodu--içerisinde değer geçiyor mu diye kontrol ediyor.
+
+const numbers1 = [1, 3, 5, 7]
+console.log(numbers1.includes(8)) // 8 olmadığı için false dönecek
+const addNumber = number => {numbers.push(number)}
+addNumber(5)
+addNumber(6)
+addNumber(8)
+console.log(numbers)
+// Map Metodu
+const numbers2 = [1, 4, 5]
+const result2 = numbers2.map(number => number * 2)
+console.log(result2) // dize içerisindeki sayıları 2 ile çarpma
+ 
+const users2 = [
+  {
+    name: "furkan",
+    surname: "Apaydın",
+    age:30
+  },
+  {
+    name: "Doğan",
+    surname: "Kurtuluş",
+    age:36
+  }
+]
+console.log(users2.map(user => user.age * 2)) // age objesine atadığımız değerleri 2 ile çarpma
+console.log(users2.map(user => user.name.toUpperCase()))
+
+const pets = ["goldfish", "dog", "turtle", "tiger"];
+const a = pets.filter(pet => pet.length <= 5)
+console.log(a)
+const b = pets.filter(pet => pet[0]=="t")
+console.log(b)
+const numbers4 = [3, 7, 4, 5, 10];
+const c = numbers4.filter(number => number >= 4)
+console.log(c)
+const d = numbers4.filter(number => number % 2 == 0)
+console.log(d)
