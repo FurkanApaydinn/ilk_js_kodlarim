@@ -293,3 +293,87 @@ for (z = 15; z <= 5; z--){
 for (k = 5; k <= 5; z += 2){
  console.log(k)
 }
+
+// Tüm zorluklarınız için aşağıdaki nesne dizisiyle çalışacaksınız. Diziyi hiç değiştirmeyin.
+const planets = [
+    { 
+        id: 0,
+        name: "Mercury",
+        numOfMoons: 0
+    },
+    {
+        id: 1,
+        name: "Venus",
+        numOfMoons: 0
+    },
+    {
+        id: 2,
+        name: "Earth",
+        numOfMoons: 1
+    },
+    {
+        id: 3,
+        name: "Mars",
+        numOfMoons: 2
+    },
+    {
+        id: 4,
+        name: "Jupiter",
+        numOfMoons: 79
+    },
+    {
+        id: 5,
+        name: "Saturn",
+        numOfMoons: 62
+    },
+    {
+        id: 6,
+        name: "Uranus",
+        numOfMoons: 27
+    },    
+    {
+        id: 7,
+        name: "Neptune",
+        numOfMoons: 14
+    }, 
+]
+
+// Challenge aşağıda başlıyor.
+
+// MAP CHALLENGE
+
+// Yalnızca gezegen adlarından oluşan yeni bir dizi oluşturmak için map kullanın, hepsi büyük harfli olmalıdır
+
+const planetNamesUpperCased = planets.map((a) => a.name.toUpperCase())
+// The console should say: ["MERCURY", "VENUS", "EARTH", "MARS", "JUPITER", "SATURN", "URANUS", "NEPTUNE"]
+console.log(planetNamesUpperCased);
+
+// FILTER CHALLENGE 1
+// planetId'de yalnızca belirtilen kimliğe sahip nesneyi filtreleyin, ardından adını console.log'a yazdırın. Bu meydan okuma sizin için kısmen tamamlandı. Buradaki /* kodunuz */ metnini kaldırın ve kendi kodunuzla değiştirin.
+const planetId = 7;
+const planetNameById = planets.filter((a)=>a.id===planetId)[0];
+// Sondaki [0] neden gerekli? Devam etmeden önce bunu iyice düşündüğünüzden ve anladığınızdan emin olun.
+// Konsol şunu yazdırmalıdır: "Neptün"
+console.log(planetNameById.name);
+
+// FILTER CHALLENGE 2
+// planetName'de yalnızca belirtilen name'e sahip nesneyi filtreleyin, ardından numOfMoons'unu console.log'a kaydedin - template literal sözdizimini kullanın.
+const planetName = "Earth";
+const planetNumMoonsByName = planets.filter((a)=> a.name===planetName)[0]
+// Konsolda şöyle demelidir: "Earth's number of moons is: 1"
+console.log( `${planetNumMoonsByName.name}''${planetNumMoonsByName.numOfMoons}'`);
+
+// REDUCE CHALLENGE
+// Güneş sistemimizdeki tüm ayların toplamını moonsTotal adlı bir değişkende toplamak için reduce kullanın.
+const moonsTotal = planets.reduce((totalM,planetM)=> totalM + planetM.numOfMoons,0)
+// Konsolda şu yazmalıdır :   185
+console.log(moonsTotal); 
+
+// YÖNTEM ZİNCİRLEME CHALLENGE 
+// İlk olarak  yalnızca uyduları olan gezegenleri filtrelemek için filter yöntemini kullanın.
+// Ardından  yalnızca 1 veya daha fazla uydusu olan gezegenlerin adlarını içeren yeni bir dizi oluşturmak için map yöntemini kullanın.
+// Bunu yöntem zincirini kullanarak yapın.
+const planetNamesWithMoons = planets.filter((a)=> a.numOfMoons>0)
+const yeni=planetNamesWithMoons.map((a)=>a.name)
+// Konsolda şöyle yazmalıdır: ["Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+console.log(yeni);
