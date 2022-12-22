@@ -451,36 +451,76 @@
 // const d = numbers4.filter(number => number % 2 == 0)
 // console.log(d)
 
-const drinkOrders = [
-  { id: 0, customerName: 'Zachary', drinkName: 'Dirty Martini'},
-  { id: 1, customerName: 'Juan', drinkName: 'Zombie'},
-  { id: 2, customerName: 'Kayla', drinkName: 'Mojito'},
-  { id: 3, customerName: 'Zachary', drinkName: 'Mojito'}
-]
+// const drinkOrders = [
+//   { id: 0, customerName: 'Zachary', drinkName: 'Dirty Martini'},
+//   { id: 1, customerName: 'Juan', drinkName: 'Zombie'},
+//   { id: 2, customerName: 'Kayla', drinkName: 'Mojito'},
+//   { id: 3, customerName: 'Zachary', drinkName: 'Mojito'}
+// ]
 
-// Tüm görevler drinkOrders dizisini kullanacak.
+// // Tüm görevler drinkOrders dizisini kullanacak.
 
-// Challenge 1 
-//  customerName 'Juan' olan  ilk nesneyi almak için find() yöntemini kullanın.
-console.log(drinkOrders.find((order) => order.customerName === 'Juan'));
-
-
-// Challenge 2 
-// drinkName olarak 'Mojito'yu içeren drinkOrders dizisindeki ilk nesneyi almak için find() yöntemini kullanın.
-// Kodunuzu bu satırın altına yazın.
-console.log(drinkOrders.find((a)=>a.drinkName==="Mojito"))
+// // Challenge 1 
+// //  customerName 'Juan' olan  ilk nesneyi almak için find() yöntemini kullanın.
+// console.log(drinkOrders.find((order) => order.customerName === 'Juan'));
 
 
-// Challenge 3 
-// drinkOrders dizisinden id'si 3 olan nesneyi almak için find() yöntemini kullanın .Ardından tüm nesne yerine yalnızca onu sipariş eden müşterinin adını console.log'a alın. İpucu: Nesneyi almak için find() kullanın  ardından id'ye erişmek için nokta gösterimini kullanın.
-// Kodunuzu bu satırın altına yazın.
+// // Challenge 2 
+// // drinkName olarak 'Mojito'yu içeren drinkOrders dizisindeki ilk nesneyi almak için find() yöntemini kullanın.
+// // Kodunuzu bu satırın altına yazın.
+// console.log(drinkOrders.find((a)=>a.drinkName==="Mojito"))
 
-console.log(drinkOrders.find((b)=> b.id===3).customerName)
+
+// // Challenge 3 
+// // drinkOrders dizisinden id'si 3 olan nesneyi almak için find() yöntemini kullanın .Ardından tüm nesne yerine yalnızca onu sipariş eden müşterinin adını console.log'a alın. İpucu: Nesneyi almak için find() kullanın  ardından id'ye erişmek için nokta gösterimini kullanın.
+// // Kodunuzu bu satırın altına yazın.
+
+// console.log(drinkOrders.find((b)=> b.id===3).customerName)
 
 
-// Bonus 
-// Yalnızca 'Zachary' müşteri adına sahip nesneleri içeren yeni bir dizi oluşturmak için filter() yöntemini kullanın. Ardından drinkName'i   'Mojito' olan nesnenin id'sini almak için bu yeni dizide find() yöntemini kullanın.
-// Kodunuzu bu satırın altına yazın.
+// // Bonus 
+// // Yalnızca 'Zachary' müşteri adına sahip nesneleri içeren yeni bir dizi oluşturmak için filter() yöntemini kullanın. Ardından drinkName'i   'Mojito' olan nesnenin id'sini almak için bu yeni dizide find() yöntemini kullanın.
+// // Kodunuzu bu satırın altına yazın.
 
-customerNameZ=drinkOrders.filter((c)=>c.customerName==="Zachary");
-console.log(drinkOrders.find((d)=>d.drinkName==="Mojito").id)
+// customerNameZ=drinkOrders.filter((c)=>c.customerName==="Zachary");
+// console.log(drinkOrders.find((d)=>d.drinkName==="Mojito").id)
+
+const button = document.querySelector('button');
+const numberElm = document.querySelector('#number');
+const resultElm = document.querySelector('#result');
+
+button.addEventListener('click', function () {
+  resultElm.textContent = numberElm.value > 100 ? 'Çok Büyük' : ( numberElm.value < 100 ? 'Çok Küçük' : 'Harika');
+});
+
+//---------------------------------------------------------------------------------------------//
+const insanlar = [{
+   isim: 'Furkan',
+   yaş: 36
+}, {
+   isim: 'İbo',
+   yaş: 41
+}, {
+   isim: 'Samet',
+   yaş: 27
+}];
+
+const otuzYaşÜstüİnsanlar = insanlar.every((insan) => {
+   return insan.yaş > 30;
+});
+
+const otuzYaşÜstüBazıİnsanlar = insanlar.some((insan) => {
+   return insan.yaş > 30;
+});
+
+console.log(otuzYaşÜstüİnsanlar ); 
+console.log(otuzYaşÜstüBazıİnsanlar ); 
+
+
+if(otuzYaşÜstüİnsanlar ) {
+   console.log('Lorem ipsum!!'); 
+}
+
+if(otuzYaşÜstüBazıİnsanlar ) {
+   console.log('Lorem ipsum!!'); 
+}
