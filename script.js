@@ -603,13 +603,34 @@
 // console.log(reactCourseUpdated);
 
 // -----------------------Asal Sayıları Bulma------------------------------------------------
-function asalMı(value){
-  for(let i =2; i<value; i ++){
-    if(value % i===0){
-      return false;
-    }
-  }
-  return value>1; 
-}
+// function asalMı(value){
+//   for(let i =2; i<value; i ++){
+//     if(value % i===0){
+//       return false;
+//     }
+//   }
+//   return value>1; 
+// }
 
-console.log([0,1,5,24,100,101].map((x)=>asalMı(x)));
+// console.log([0,1,5,24,100,101].map((x)=>asalMı(x)));
+
+//------------------------ mouse events------------------------------------------------------------------------
+const mouse=document.querySelector("span");
+mouse.addEventListener("mouseover",makeBlue);
+mouse.addEventListener("mouseover",makeTextWhite);
+mouse.addEventListener("mouseout",makeYellow);
+mouse.addEventListener("mouseout",makeTextBlack);
+mouse.addEventListener("mouseout",makeTextBlack);
+
+function makeBlue(){
+  mouse.style.background="blue"
+}
+function makeYellow(){
+  mouse.style.background="yellow"
+}
+function makeTextWhite(){
+  mouse.style.color="white"
+}
+function makeTextBlack(){
+  mouse.style.color="black"
+}
